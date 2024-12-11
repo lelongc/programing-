@@ -198,3 +198,114 @@ if [[ "${username}" != "${admin}" ]] && [[ $EUID != 0 ]] ; then
 else
     echo "You are the admin user! This could be very destructive!"
 fi
+# [[ $num -gt 0 ]]
+
+---------------------------Switch-case-statements------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------read -p "Enter the name of your car brand: " car
+read -p "Enter the name of your car brand: " car
+car=Tesla
+case $car in
+  Tesla)
+    echo -n "${car}'s car factory is in the USA."
+    ;;
+  BMW | Mercedes | Audi | Porsche)
+    echo -n "${car}'s car factory is in Germany."
+    ;;
+  Toyota | Mazda | Mitsubishi | Subaru)
+    echo -n "${car}'s car factory is in Japan."
+    ;;
+  *)
+    echo -n "${car} is an unknown car brand"
+    ;;
+esac
+
+--------------------------------------loop-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------users="devdojo bobby tony"
+users="devdojo bobby tony"
+for user in ${users}
+do
+    echo "${user}" # devdojo bobby tony
+done
+--
+for num in {1..10}
+do
+    echo ${num} # 1 2 3 4 5 6 7 8 9 10
+done
+--
+counter=1
+while [[ $counter -le 10 ]]
+do
+    echo $counter # 1 2 3 4 5 6 7 8 9 10
+    ((counter++))
+done
+--
+read -p "What is your name? " name
+while [[ -z ${name} ]]
+do
+    echo "Your name can not be blank. Please enter a valid name!"
+    read -p "Enter your name again? " name
+done
+--
+count=1
+until [[ $count -gt 10 ]]
+do
+    echo $count
+    ((count++))
+done
+------------------------continue-break--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------for i in 1 2 3 4 5
+for i in 1 2 3 4 5
+do
+    if [[ $i -eq 2 ]] 
+    then
+        echo "skipping number 2"
+        continue
+    fi
+    echo "i is equal to $i"
+done
+--
+num=1
+while [[ $num -lt 10 ]] 
+do
+    if [[ $num -eq 5 ]] 
+    then
+        break
+    fi
+    ((num++))
+done
+echo "Loop completed"
+--
+
+for (( a = 1; a < 10; a++ ))
+do
+    echo "outer loop: $a"
+    for (( b = 1; b < 100; b++ ))
+    do
+        if [[ $b -gt 5 ]] 
+        then
+            break 
+        fi
+        echo "Inner loop: $b "
+    done
+done
+------------------------function--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------function hello() {
+                      #######################################
+                    # Description: Hello function
+                    # Globals:
+                    #   None
+                    # Arguments:
+                    #   Single input argument
+                    # Outputs:
+                    #   Value of input argument
+                    # Returns:
+                    #   0 if successful, non-zero on error.
+                    #######################################
+function hello() {
+    echo "Hello World Function!"
+}
+
+hello
+--
+function hello() {
+    echo "Hello $1!"
+}
+
+hello DevDojo
+----------------------
