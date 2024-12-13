@@ -1,6 +1,11 @@
 #!/bin/bash
 #!/usr/bin/env bash         @ It searches for bash executable in directories, listed in PATH environmental variable
 
+# set -euxo pipefail
+# -e: Dừng script khi gặp lỗi.
+# -u: Báo lỗi khi dùng biến chưa được định nghĩa.
+# -x: Hiển thị chi tiết lệnh đang chạy.
+# -o pipefail: Báo lỗi nếu bất kỳ lệnh nào trong pipeline thất bại.
 echo "Hello World!" #-- 
 
 chmod +x devdojo.sh #--
@@ -308,4 +313,175 @@ function hello() {
 }
 
 hello DevDojo
-----------------------
+----------------------stdin-stdout-stderr-----------------------------------------------------------------------------------------
+
+### Tóm tắt kiến thức về STDIN và lệnh `cat`
+
+1. **STDIN và lệnh `cat`:**
+   - Khi bạn nhập dữ liệu vào một lệnh, dữ liệu này được truyền qua **STDIN (Standard Input)**.
+   - Lệnh `cat` (khi không có đối số) sẽ chờ dữ liệu từ STDIN và in nó ra **STDOUT (Standard Output)**.
+
+2. **Ví dụ cơ bản với `cat`:**
+   ```bash
+   cat << EOF
+   Hello World!
+   How are you?
+   EOF
+   ```
+   - `<< EOF` là **here-document**, dùng để chỉ định phần dữ liệu nhập.
+   - Kết quả: 
+     ```
+     Hello World!
+     How are you?
+     ```
+
+3. **Sử dụng STDIN với lệnh khác (ví dụ `wc`):**
+   ```bash
+   wc -l << EOF
+   Hello World!
+   How are you?
+   EOF
+   ```
+   - Lệnh `wc -l` đếm số dòng trong dữ liệu được nhập.
+   - Kết quả: `2` (vì có 2 dòng trong đoạn văn bản nhập).
+
+4. **Mở rộng:** 
+   - Nhiều lệnh khác cũng có thể nhận đầu vào qua STDIN.
+   - Cách này hữu ích khi cần tự động hóa hoặc cung cấp dữ liệu trực tiếp mà không cần file trung gian.
+
+--
+# 1 là out 2 là err 
+echo "Hello World!" > file.txt # ghi đè #  1>
+echo "How are you?" >> file.txt # ghi thêm # 1>>
+
+ls --hello 2> error.txt # 2>>
+--
+
+ls --hello 2> /dev/null
+# Chỉ hiển thị thông tin thành công, ẩn lỗi:
+# Lệnh ls --hello gây lỗi vì --hello không phải là tùy chọn hợp lệ.
+# 2> /dev/null: Chuyển hướng STDERR (error message) tới /dev/null, do đó bạn không thấy thông báo lỗi trên terminal.
+# /dev/null là một file đặc biệt trong Linux, còn được gọi là "black hole".
+# Bất kỳ dữ liệu nào gửi đến /dev/null sẽ bị hủy ngay lập tức.
+# Hữu ích khi bạn muốn tránh hiển thị lỗi không quan trọng trong script, nhưng cần cẩn thận để không bỏ qua lỗi quan trọng.
+
+ls --hello &> /dev/null
+# &> chuyển hướng cả STDOUT (1) và STDERR (2) tới /dev/null.
+
+
+./install_package.sh > output.txt 2> error.txt
+# để ghi riêng: > file1 2> file2.
+# Để ghi cùng file (đề xuất): > file.txt 2>&1 hoặc &> file.txt. #2>&1: Chuyển hướng STDERR (2) để theo STDOUT (1), tức là ghi vào file.txt luôn.
+
+--------------------here-doc/stringstring--------------------------------------------------------------------------------------------------------------------------------------------
+### Tóm tắt về **Heredoc** trong Bash:
+
+#### 1. **Heredoc là gì?**
+- **Heredoc** (viết tắt của *Here Document*) là một cách để cung cấp đầu vào nhiều dòng cho một lệnh, trực tiếp trong script hoặc dòng lệnh.
+- Ký hiệu `<<` dùng để bắt đầu Heredoc, và một **delimiter** (ví dụ: `EOF`, `END`, `randomword`) dùng để xác định điểm bắt đầu và kết thúc.
+
+#### 2. **Cách sử dụng cơ bản:**
+```bash
+cat << EOF
+This is a Heredoc example.
+It allows you to write multiple lines.
+EOF
+```
+- **Kết quả:** 
+  ```
+  This is a Heredoc example.
+  It allows you to write multiple lines.
+  ```
+
+#### 3. **Sử dụng tên khác thay cho `EOF`:**
+```bash
+cat << randomword
+This is another example.
+You can use any word as the delimiter.
+randomword
+```
+- **Kết quả giống nhau.**
+
+#### 4. **Kết hợp với pipes:**
+Heredoc có thể được kết hợp với các lệnh khác qua **pipe (`|`)**:
+```bash
+cat << EOF | wc -l
+This is line 1.
+This is line 2.
+This is line 3.
+EOF
+```
+- **Kết quả:** `3` (số dòng trong nội dung Heredoc).
+
+#### 5. **Sử dụng biến trong Heredoc:**
+- Biến có thể được sử dụng bên trong Heredoc nếu không có ký tự ngắt (quote) ở delimiter:
+```bash
+name="John"
+cat << EOF
+Hello, $name!
+Welcome to Bash scripting.
+EOF
+```
+- **Kết quả:**
+  ```
+  Hello, John!
+  Welcome to Bash scripting.
+  ```
+
+- Nếu muốn giữ nguyên nội dung (không xử lý biến):
+```bash
+cat << 'EOF'
+Hello, $name!
+EOF
+```
+- **Kết quả:**
+  ```
+  Hello, $name!
+  ```
+
+#### 6. **Ứng dụng:**
+- **Heredoc** làm cho script gọn gàng hơn khi cần nhập dữ liệu nhiều dòng hoặc tạo file tạm thời.
+- Ví dụ với `cat`, `wc`, hoặc bất kỳ lệnh nào chấp nhận **STDIN**.
+
+#### 7. **Kết hợp nâng cao:**
+```bash
+cat << EOF | grep "line"
+This is line 1.
+This is line 2.
+Another line here.
+EOF
+```
+- **Kết quả:**
+  ```
+  This is line 1.
+  This is line 2.
+  Another line here.
+  ``` 
+---
+wc -w <<< "Count the words in this line."
+---
+read var < file.txt
+echo $var
+--
+cat < file.txt
+
+
+
+                        # --------------
+                        # > Save output to a file
+                        # >> Append output to a file
+                        # < Read input from a file
+                        # 2> Redirect error messages
+                        # | Send the output from one program as input to another program
+                        # << Pipe multiple lines into a program cleanly
+                        # <<< Pipe a single line into a program cleanl
+-----------------------sed---------------
+sed -i "2d" /etc/apache2/mods-enabled/dir.conf
+
+# Lệnh	Mô tả
+# nd	# Xóa dòng thứ n.
+# /pattern/d	# Xóa tất cả dòng khớp với pattern.
+# ni\ text	 # Chèn dòng text sau dòng thứ n.
+# n a\ text	# Thêm dòng text vào ngay sau dòng n.
+# s/pattern/replacement/	# Thay thế pattern bằng replacement.
+# /pattern/p	#In tất cả các dòng khớp với pattern.
