@@ -57,3 +57,33 @@ switch (thang) {
     default:
         console.log("Tháng không hợp lệ! Vui lòng nhập từ 1 đến 12.");
 }
+
+
+function cuuChuong(n) {
+    console.log("Bảng cửu chương " + n);
+    for (let i = 1; i <= 10; i++) {
+        console.log(n + " x " + i + " = " + (n * i));
+    }
+}
+
+// Gọi hàm với bảng cửu chương 5
+cuuChuong(5);
+
+
+
+let thang = 2; 
+switch (thang) {
+    case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+        soNgay = "Tháng " + thang + " có 31 ngày";
+        break;
+    case 4: case 6: case 9: case 11:
+        soNgay = "Tháng " + thang + " có 30 ngày";
+        break;
+    case 2:
+        soNgay = "Tháng 2 có 28 hoặc 29 ngày (năm nhuận)";
+        break;
+    default:
+        soNgay = "Tháng không hợp lệ!";
+}
+
+console.log(soNgay);
