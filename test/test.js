@@ -37,3 +37,23 @@ if (diemTB >= 0 && diemTB <= 10) {
 } else {
     console.log("Điểm không hợp lệ! Vui lòng nhập giá trị từ 0 đến 10.");
 }
+
+
+
+
+
+let thang = 2;
+
+switch (thang) {
+    case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+        console.log("Tháng " + thang + " có 31 ngày.");
+        break;
+    case 4: case 6: case 9: case 11:
+        console.log("Tháng " + thang + " có 30 ngày.");
+        break;
+    case 2:
+        console.log("Tháng 2 có 28 ngày.");
+        break;
+    default:
+        console.log("Tháng không hợp lệ! Vui lòng nhập từ 1 đến 12.");
+}
