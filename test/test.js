@@ -18,3 +18,22 @@ if (a + b > c && a + c > b && b + c > a) {
 } else {
     console.log("Ba cạnh không tạo thành tam giác");
 }
+
+
+
+
+let diemTB = 7.5;  
+
+if (diemTB >= 0 && diemTB <= 10) {
+    if (diemTB >= 8) {
+        console.log("Xếp loại: Giỏi");
+    } else if (diemTB >= 6.5) {
+        console.log("Xếp loại: Khá");
+    } else if (diemTB >= 5) {
+        console.log("Xếp loại: Trung bình");
+    } else {
+        console.log("Xếp loại: Yếu");
+    }
+} else {
+    console.log("Điểm không hợp lệ! Vui lòng nhập giá trị từ 0 đến 10.");
+}
