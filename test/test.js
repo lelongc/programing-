@@ -1,89 +1,61 @@
-
-let a = 2;
-document.write(a % 2 == 0 ? "a là số chẵn" : "a là số lẻ");
-
-
-
-let a = 3, b = 4, c = 5; // Nhập độ dài 3 cạnh
-
-if (a + b > c && a + c > b && b + c > a) { 
-    // Nếu tổng hai cạnh lớn hơn cạnh còn lại thì là tam giác
-    if (a === b && b === c) {
-        console.log("Tam giác đều");
-    } else if (a === b || a === c || b === c) {
-        console.log("Tam giác cân");
+function kiemTraTamGiac(a, b, c) {
+    if (a + b > c && a + c > b && b + c > a) {
+        if (a === b && b === c) {
+            console.log("Tam giác đều");
+        } else if (a === b || a === c || b === c) {
+            console.log("Tam giác cân");
+        } else {
+            console.log("Tam giác thường");
+        }
     } else {
-        console.log("Tam giác thường");
+        console.log("Không phải là tam giác");
     }
-} else {
-    console.log("Ba cạnh không tạo thành tam giác");
 }
 
-
-
-
-let diemTB = 7.5;  
-
-if (diemTB >= 0 && diemTB <= 10) {
-    if (diemTB >= 8) {
-        console.log("Xếp loại: Giỏi");
-    } else if (diemTB >= 6.5) {
-        console.log("Xếp loại: Khá");
-    } else if (diemTB >= 5) {
-        console.log("Xếp loại: Trung bình");
+function xepLoaiHocLuc(diemTB) {
+    if (diemTB >= 0 && diemTB <= 10) {
+        if (diemTB >= 8) {
+            console.log("Xếp loại: Giỏi");
+        } else if (diemTB >= 6.5) {
+            console.log("Xếp loại: Khá");
+        } else if (diemTB >= 5) {
+            console.log("Xếp loại: Trung bình");
+        } else {
+            console.log("Xếp loại: Yếu");
+        }
     } else {
-        console.log("Xếp loại: Yếu");
-    }
-} else {
-    console.log("Điểm không hợp lệ! Vui lòng nhập giá trị từ 0 đến 10.");
-}
-
-
-
-
-
-let thang = 2;
-
-switch (thang) {
-    case 1: case 3: case 5: case 7: case 8: case 10: case 12:
-        console.log("Tháng " + thang + " có 31 ngày.");
-        break;
-    case 4: case 6: case 9: case 11:
-        console.log("Tháng " + thang + " có 30 ngày.");
-        break;
-    case 2:
-        console.log("Tháng 2 có 28 ngày.");
-        break;
-    default:
-        console.log("Tháng không hợp lệ! Vui lòng nhập từ 1 đến 12.");
-}
-
-
-function cuuChuong(n) {
-    console.log("Bảng cửu chương " + n);
-    for (let i = 1; i <= 10; i++) {
-        console.log(n + " x " + i + " = " + (n * i));
+        console.log("Điểm không hợp lệ");
     }
 }
 
-// Gọi hàm với bảng cửu chương 5
-cuuChuong(5);
-
-
-
-let thang = 2; 
-switch (thang) {
-    case 1: case 3: case 5: case 7: case 8: case 10: case 12:
-        soNgay = "Tháng " + thang + " có 31 ngày";
-        break;
-    case 4: case 6: case 9: case 11:
-        soNgay = "Tháng " + thang + " có 30 ngày";
-        break;
-    case 2:
-        soNgay = "Tháng 2 có 28 hoặc 29 ngày (năm nhuận)";
-        break;
-    default:
-        soNgay = "Tháng không hợp lệ!";
+function soNgayTrongThang(thang) {
+    switch (thang) {
+        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+            console.log("Tháng " + thang + " có 31 ngày");
+            break;
+        case 4: case 6: case 9: case 11:
+            console.log("Tháng " + thang + " có 30 ngày");
+            break;
+        case 2:
+            console.log("Tháng 2 có 28 hoặc 29 ngày");
+            break;
+        default:
+            console.log("Tháng không hợp lệ");
+    }
 }
 
-console.log(soNgay);
+kiemTraTamGiac(3, 4, 5);
+kiemTraTamGiac(2, 2, 2);
+kiemTraTamGiac(3, 3, 5);
+kiemTraTamGiac(1, 2, 3);
+
+xepLoaiHocLuc(9);
+xepLoaiHocLuc(7);
+xepLoaiHocLuc(5.5);
+xepLoaiHocLuc(4);
+xepLoaiHocLuc(11);
+
+soNgayTrongThang(2);
+soNgayTrongThang(4);
+soNgayTrongThang(12);
+soNgayTrongThang(13);
