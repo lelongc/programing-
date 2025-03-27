@@ -97,6 +97,73 @@ Việc lên kế hoạch rõ ràng giúp bạn có định hướng, tránh cả
 Nếu bạn cảm thấy trì hoãn, hãy thử chỉ "chuẩn bị" trước, rồi để xem liệu bạn có tự nhiên muốn bắt đầu không!
 
 
+_______
+
+English vocabulary in use 
+---
+
+1. Trước khi học – Chỉ chuẩn bị, không học
+
+Câu thần chú: "Hôm nay chưa học, chỉ sắp xếp tài liệu cho dễ học thôi!"
+
+Việc cần làm:
+
+Lấy sách ra, chọn 5 unit cho ngày hôm nay.
+
+Ghi lại tiêu đề và nội dung chính của 5 unit vào sổ hoặc file note.
+
+Chuẩn bị flashcards hoặc app (Anki, Quizlet) để học từ vựng.
+
+Tạo bảng theo dõi tiến độ (mỗi ngày tick vào unit đã học).
+
+Mở sẵn từ điển hoặc video minh họa để dễ tra cứu.
+
+
+
+⏩ Kết quả: Khi mọi thứ đã sẵn sàng, bộ não sẽ cảm thấy “học cũng không khó lắm” và có thể tự động bắt đầu học.
+
+
+---
+
+2. Đang học – Biến việc học thành một phần tự nhiên
+
+Câu thần chú: "Mình chỉ đọc qua cho biết thôi, không cần phải nhớ hết ngay!"
+
+Việc cần làm:
+
+Đọc 5 unit mà không áp lực nhớ ngay lập tức.
+
+Ghi chú từ vựng hoặc cụm từ quan trọng.
+
+Đọc to các ví dụ và thử đặt câu với từ mới.
+
+Nghe phát âm và nhắc lại một cách thoải mái.
+
+
+
+⏩ Kết quả: Bạn không bị căng thẳng mà vẫn tiếp thu từ vựng một cách tự nhiên.
+
+
+---
+
+3. Sau khi học – Tạo động lực tiếp tục
+
+Câu thần chú: "Mình đã học thêm 5 unit, giỏi hơn hôm qua rồi!"
+
+Việc cần làm:
+
+Đánh dấu vào bảng tiến độ để thấy mình đã hoàn thành.
+
+Ôn lại bằng flashcards hoặc tự kiểm tra nhanh.
+
+Tự thưởng (nghe nhạc, xem video tiếng Anh yêu thích).
+
+
+
+⏩ Kết quả: Việc học trở nên nhẹ nhàng, không áp lực, và bạn có động lực duy trì mỗi ngày.
+
+Áp dụng cách này, bạn sẽ thấy mình học đều đặn mà không còn trì hoãn!
+
 
 _______
 thần chú
