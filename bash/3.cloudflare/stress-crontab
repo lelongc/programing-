@@ -1,7 +1,0 @@
-* * * * * /root/.cloudflare/ddos-cloudflare.sh
-* * * * * ( sleep 30 ; /root/.cloudflare/ddos-cloudflare.sh ) >> /tmp/ddos.log 2>&1
-
-
-
-tải stress
-stress --cpu 4 --vm 2 --vm-bytes 512M --timeout 60
