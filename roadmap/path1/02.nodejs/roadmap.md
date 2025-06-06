@@ -20,7 +20,7 @@
 
 ### **2. Node.js Runtime Environment:**
 
-    - 2.1. Global objects: `global`, `process`, `__dirname`, `__filename`.
+    - 2.1. Global objects:`global`, `process`, `__dirname`, `__filename`.
     - 2.2. Process object: `process.argv`, `process.env`, `process.exit()`.
     - 2.3. Command line arguments và environment variables.
     - 2.4. Buffer object và console object.
@@ -28,21 +28,21 @@
 ### **3. Module System (CommonJS):**
 
     - 3.1. Hiểu về modules trong Node.js.
-    - 3.2. `require()` function và cách hoạt động.
+    - 3.2.`require()` function và cách hoạt động.
     - 3.3. `module.exports` và `exports` object.
     - 3.4. Tạo và sử dụng custom modules.
     - 3.5. Local modules vs global modules.
 
 ### **4. Built-in Modules:**
 
-    - 4.1. Path module: `path.join()`, `path.resolve()`, `path.dirname()`.
+    - 4.1. Path module:`path.join()`, `path.resolve()`, `path.dirname()`.
     - 4.2. OS module: `os.platform()`, `os.arch()`, `os.cpus()`.
     - 4.3. Crypto module: hashing, random generation.
     - 4.4. Util module: `util.promisify()`, `util.callbackify()`.
 
 ### **5. File System Operations:**
 
-    - 5.1. Reading files: `fs.readFile()`, `fs.readFileSync()`.
+    - 5.1. Reading files:`fs.readFile()`, `fs.readFileSync()`.
     - 5.2. Writing files: `fs.writeFile()`, `fs.appendFile()`.
     - 5.3. File information: `fs.stat()`, `fs.exists()`.
     - 5.4. Directory operations: `fs.mkdir()`, `fs.readdir()`, `fs.rmdir()`.
@@ -51,7 +51,7 @@
 ### **6. Streams Introduction:**
 
     - 6.1. Hiểu về streams và lợi ích.
-    - 6.2. Readable streams: `fs.createReadStream()`.
+    - 6.2. Readable streams:`fs.createReadStream()`.
     - 6.3. Writable streams: `fs.createWriteStream()`.
     - 6.4. Stream events: data, end, error.
     - 6.5. Piping streams.
@@ -62,7 +62,7 @@
 
 ### **7. HTTP Module:**
 
-    - 7.1. Creating HTTP server với `http.createServer()`.
+    - 7.1. Creating HTTP server với`http.createServer()`.
     - 7.2. Request object: URL, method, headers.
     - 7.3. Response object: headers, status codes, content.
     - 7.4. Handling different HTTP methods.
@@ -96,7 +96,7 @@
 
     - 11.1. EventEmitter class và cách sử dụng.
     - 11.2. Creating custom events.
-    - 11.3. Event listeners: `on()`, `once()`, `off()`.
+    - 11.3. Event listeners:`on()`, `once()`, `off()`.
     - 11.4. Error events và handling.
     - 11.5. Event-driven architecture patterns.
 
@@ -258,8 +258,8 @@
 
 ### **HTTP & Networking:**
 
-- [ ] HTTP server creation
-- [ ] Request/response handling
+- [x] HTTP server creation
+- [x] Request/response handling
 - [ ] API development
 - [ ] Client-side requests
 - [ ] Error handling
