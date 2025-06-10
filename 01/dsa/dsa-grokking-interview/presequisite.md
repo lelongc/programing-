@@ -1,52 +1,52 @@
-## **Giáo trình: Chinh phục Nền tảng Phỏng vấn Coding**
+## **Curriculum: Mastering Coding Interview Foundations**
 
-### **Chương 0: Nhập môn & Chuẩn bị (2 bài học)**
+### **Chapter 0: Introduction & Preparation (2 lessons)**
 
-- **Mục tiêu:** Thiết lập môi trường làm việc và tư duy đúng đắn.
-- **Bài 0.1:** Tư duy của Lập trình viên - Chấp nhận lỗi, học cách tìm kiếm thông tin và kiên trì gỡ lỗi (debug).
-- **Bài 0.2:** Cài đặt "Phòng thí nghiệm" - Hướng dẫn cài đặt Python, Visual Studio Code và các tiện ích (extensions) cần thiết.
+- **Goal:** Set up your working environment and the right mindset.
+- **Lesson 0.1:** Programmer Mindset – Embrace errors, learn how to search for information, and persistently debug.
+- **Lesson 0.2:** Setting up the "Lab" – Guide to installing Python, Visual Studio Code, and essential extensions.
 
-### **Chương 1: Các khối lệnh cơ bản của Python (8 bài học)**
+### **Chapter 1: Python Basic Statements (8 lessons)**
 
-- **Mục tiêu:** Nắm vững các khái niệm lập trình cơ bản nhất.
-- **Bài 1.1:** Biến, Kiểu dữ liệu & In ra màn hình (Variables, Data Types & Print).
-- **Bài 1.2:** Các loại Toán tử (Operators) - Số học, So sánh, Logic.
-- **Bài 1.3:** Nhận dữ liệu từ người dùng (User Input).
-- **Bài 1.4:** Cấu trúc dữ liệu `List` - Tương đương với Mảng (Arrays).
-- **Bài 1.5:** Cấu trúc dữ liệu `Dictionary` - Tương đương với Hash Maps.
-- **Bài 1.6:** Câu lệnh điều kiện `if`, `elif`, `else`.
-- **Bài 1.7:** Vòng lặp `for` và `while`.
-- **Bài 1.8:** Hàm (Functions) - Cách định nghĩa và sử dụng để tái sử dụng code.
+- **Goal:** Master the most fundamental programming concepts.
+- **Lesson 1.1:** Variables, Data Types & Print.
+- **Lesson 1.2:** Operators – Arithmetic, Comparison, Logic.
+- **Lesson 1.3:** User Input.
+- **Lesson 1.4:** `List` Data Structure – Equivalent to Arrays.
+- **Lesson 1.5:** `Dictionary` Data Structure – Equivalent to Hash Maps.
+- **Lesson 1.6:** Conditional Statements: `if`, `elif`, `else`.
+- **Lesson 1.7:** Loops: `for` and `while`.
+- **Lesson 1.8:** Functions – How to define and use them for code reuse.
 
-### **Chương 2: Lập trình Hướng đối tượng (OOP) (3 bài học)**
+### **Chapter 2: Object-Oriented Programming (OOP) (3 lessons)**
 
-- **Mục tiêu:** Học cách tạo "khuôn mẫu" cho các cấu trúc dữ liệu.
-- **Bài 2.1:** Giới thiệu về `class` (lớp) và `object` (đối tượng).
-- **Bài 2.2:** Phương thức khởi tạo `__init__` và biến `self`.
-- **Bài 2.3:** Tạo các phương thức (methods) cho đối tượng.
+- **Goal:** Learn how to create "blueprints" for data structures.
+- **Lesson 2.1:** Introduction to `class` and `object`.
+- **Lesson 2.2:** The `__init__` constructor and the `self` variable.
+- **Lesson 2.3:** Creating methods for objects.
 
-### **Chương 3: Cấu trúc Dữ liệu, Giải thuật & Big-O (16 bài học)**
+### **Chapter 3: Data Structures, Algorithms & Big-O (16 lessons)**
 
-- **Mục tiêu:** Hiểu, tự triển khai và phân tích các cấu trúc dữ liệu cốt lõi.
-- **Phần A: Nền tảng Phân tích**
-  - **Bài 3.1:** Giới thiệu Big-O Notation - Tại sao cần đo lường hiệu năng? Time & Space Complexity.
-- **Phần B: Các Cấu trúc Tuyến tính**
-  - **Bài 3.2:** Đào sâu về `List`/`Array` - Phân tích Big-O của các thao tác.
-  - **Bài 3.3:** Linked Lists (Lý thuyết) - Node là gì? So sánh với Array.
-  - **Bài 3.4:** Linked Lists (Thực hành) - Triển khai Singly Linked List bằng `class`.
-  - **Bài 3.5:** Stacks (Ngăn xếp) - Lý thuyết LIFO và triển khai.
-  - **Bài 3.6:** Queues (Hàng đợi) - Lý thuyết FIFO và triển khai.
-- **Phần C: Các Cấu trúc Phi tuyến tính**
-  - **Bài 3.7:** Hash Tables (Lý thuyết) - Hash Function, Collisions. Hiểu tại sao Dictionary lại nhanh.
-  - **Bài 3.8:** Trees (Lý thuyết) - Các thuật ngữ: Root, Node, Leaf, Edge, Height.
-  - **Bài 3.9:** Binary Search Trees (BST) - Lý thuyết và quy tắc sắp xếp.
-  - **Bài 3.10:** Binary Search Trees (Thực hành) - Triển khai các thao tác `insert`, `search`.
-  - **Bài 3.11:** Duyệt cây (Tree Traversal) - Giới thiệu về In-order, Pre-order, Post-order (DFS).
-  - **Bài 3.12:** Duyệt cây theo chiều rộng (BFS - Breadth-First Search).
-- **Phần D: Các Cấu trúc Chuyên biệt**
-  - **Bài 3.13:** Heaps (Đống) - Lý thuyết về Min-Heap, Max-Heap và ứng dụng Priority Queue.
-  - **Bài 3.14:** Graphs (Đồ thị - Lý thuyết) - Các thuật ngữ: Vertex, Edge, Directed, Undirected.
-  - **Bài 3.15:** Graphs (Thực hành) - Biểu diễn đồ thị (Adjacency List, Adjacency Matrix).
-  - **Bài 3.16:** Duyệt đồ thị - Áp dụng lại BFS và DFS trên đồ thị.
+- **Goal:** Understand, implement, and analyze core data structures.
+- **Section A: Analysis Foundations**
+  - **Lesson 3.1:** Introduction to Big-O Notation – Why measure performance? Time & Space Complexity.
+- **Section B: Linear Data Structures**
+  - **Lesson 3.2:** Deep Dive into `List`/`Array` – Big-O analysis of operations.
+  - **Lesson 3.3:** Linked Lists (Theory) – What is a Node? Comparison with Arrays.
+  - **Lesson 3.4:** Linked Lists (Practice) – Implementing a Singly Linked List using `class`.
+  - **Lesson 3.5:** Stacks – LIFO theory and implementation.
+  - **Lesson 3.6:** Queues – FIFO theory and implementation.
+- **Section C: Non-linear Data Structures**
+  - **Lesson 3.7:** Hash Tables (Theory) – Hash Function, Collisions. Why are Dictionaries fast?
+  - **Lesson 3.8:** Trees (Theory) – Terms: Root, Node, Leaf, Edge, Height.
+  - **Lesson 3.9:** Binary Search Trees (BST) – Theory and ordering rules.
+  - **Lesson 3.10:** Binary Search Trees (Practice) – Implementing `insert`, `search` operations.
+  - **Lesson 3.11:** Tree Traversal – Introduction to In-order, Pre-order, Post-order (DFS).
+  - **Lesson 3.12:** Breadth-First Search (BFS) Tree Traversal.
+- **Section D: Specialized Structures**
+  - **Lesson 3.13:** Heaps – Theory of Min-Heap, Max-Heap, and Priority Queue applications.
+  - **Lesson 3.14:** Graphs (Theory) – Terms: Vertex, Edge, Directed, Undirected.
+  - **Lesson 3.15:** Graphs (Practice) – Representing graphs (Adjacency List, Adjacency Matrix).
+  - **Lesson 3.16:** Graph Traversal – Applying BFS and DFS on graphs.
 
 ---

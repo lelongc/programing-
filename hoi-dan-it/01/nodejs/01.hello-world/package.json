@@ -1,0 +1,11 @@
+{
+  "name": "01.hello-world",
+  "version": "1.0.0",
+  "description": "nodejs course ",
+  "main": "app.js",
+  "scripts": {
+    "test": "test "
+  },
+  "author": "drash",
+  "license": "ISC"
+}

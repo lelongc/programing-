@@ -1,9 +1,3 @@
-Tuyệt vời! Dưới đây là lộ trình học Linux chi tiết dành cho SysAdmin, đặc biệt tập trung vào các kỹ năng DevOps cần thiết để bạn tự tin đi làm, kể cả làm remote. Lộ trình này sẽ bao gồm các khái niệm cốt lõi, công cụ và thực tiễn tốt nhất.
-
-Chúng ta sẽ đi qua từng phần, và bạn cứ thoải mái hỏi sâu về bất kỳ mục nào nhé. 🚀
-
----
-
 ## Lộ Trình Học Linux cho SysAdmin & DevOps
 
 Dưới đây là các chủ đề chính bạn cần nắm vững. Tôi sẽ liệt kê chúng, và sau đó bạn có thể chọn từng mục để chúng ta đi vào chi tiết.
