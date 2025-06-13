@@ -1,6 +1,5 @@
 import { Request, Response } from 'express';
-
-
+import handleCreateUser from '../services/user-service';
 interface HomePageData {
                 title: string;
 }
@@ -21,7 +20,9 @@ const getCreateUserPage = (req: Request, res: Response): void => {
 }
 
 const postCreateUserPage = (req: Request, res: Response): void => {
-                console.log('log: ', req.body);
+                // Lấy dữ liệu từ form gửi lên
+                const { username, email, address } = req.body;
+                handleCreateUser(username, email, address);
                 return res.redirect('/');
 }
 export { getHomepage, getCreateUserPage, postCreateUserPage };

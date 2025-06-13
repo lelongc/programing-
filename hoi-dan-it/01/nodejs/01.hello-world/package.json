@@ -11,7 +11,8 @@
     "watch": "tsc --watch",
     "clean": "rm -rf dist",
     "uninstall": "npm uninstall express @types/express typescript @types/node nodemon ts-node",
-    "installdp": "npm install express @types/express typescript @types/node nodemon ts-node"
+    "installdp": "npm install express @types/express typescript @types/node nodemon ts-node",
+    "start:debug": "nodemon --inspect=9229 -e ts,tsx --exec node -r ts-node/register ./src/app.ts"
   },
   "nodemonConfig": {
     "watch": [
