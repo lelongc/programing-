@@ -1,11 +1,13 @@
+// This file is used to configure the debugging environment for Node.js applications for folder "hoi-dan-it/01/nodejs".
+// It specifies how to launch the application in debug mode using npm scripts.
 {
   "version": "1.0.0",
   "configurations": [
     {
-      "name": "debug-long",
+      "name": "debug-nodejshd",
       "type": "node",
       "request": "launch",
-      "cwd": "${workspaceRoot}",
+      "cwd": "${workspaceFolder}\\hoi-dan-it\\01\\nodejs",
       "runtimeExecutable": "npm",
       "runtimeArgs": [
         "run",
