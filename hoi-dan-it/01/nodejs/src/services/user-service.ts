@@ -9,6 +9,9 @@ const handleCreateUser = async (username: string, email: string, address: string
             const values = [username, email, address];
             // Sử dụng connection.query để thực hiện truy vấn
             const [results, fields] = await connection.query(sql, values);
+            // console.log(results);
+            // Trả về kết quả truy vấn
+            // return results;
       } catch (err) {
             console.log(err);
       }
@@ -27,4 +30,19 @@ const getAllUsers = async () => {
             return [];
       }
 };
-export { handleCreateUser, getAllUsers };
+
+const handleDeleteUser = async (userId: string) => {
+      const connection = await getConnection();
+      try {
+            const sql = 'DELETE FROM `user` WHERE id = ?';
+            const values = [userId];
+            const [results, fields] = await connection.query(sql, values);
+            // Xóa người dùng khỏi cơ sở dữ liệu
+            // console.log(results);
+            // return results; // trả về kết quả xóa người dùng
+      } catch (err) {
+            console.log(err);
+      }
+};
+
+export { handleCreateUser, getAllUsers, handleDeleteUser };

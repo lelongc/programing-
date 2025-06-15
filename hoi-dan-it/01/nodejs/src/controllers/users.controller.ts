@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { handleCreateUser, getAllUsers } from "@services/user-service";
+import { handleCreateUser, getAllUsers, handleDeleteUser } from "@services/user-service";
 interface HomePageData {
   title: string;
 }
@@ -31,4 +31,12 @@ const postCreateUserPage = async (req: Request, res: Response): Promise<void> =>
   await handleCreateUser(username, email, address);
   return res.redirect("/");
 };
-export { getHomepage, getCreateUserPage, postCreateUserPage };
+const postDelUserPage = async (req: Request, res: Response): Promise<void> => {
+  const userId = req.params.id;
+  // Lấy ID người dùng từ tham số URL
+  await handleDeleteUser(userId);
+  // Gọi hàm handleDeleteUser để xóa người dùng khỏi cơ sở dữ liệu
+  // Hàm này sẽ nhận vào ID người dùng và thực hiện xóa người dùng khỏi cơ sở dữ liệu.
+  return res.redirect("/");
+};
+export { getHomepage, getCreateUserPage, postCreateUserPage, postDelUserPage };
