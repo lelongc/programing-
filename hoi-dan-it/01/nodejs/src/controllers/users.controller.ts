@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { handleCreateUser, getAllUsers, handleDeleteUser } from "@services/user-service";
+import { handleCreateUser, getAllUsers, handleDeleteUser, handleViewUser } from "@services/user-service";
 interface HomePageData {
   title: string;
 }
@@ -39,4 +39,14 @@ const postDelUserPage = async (req: Request, res: Response): Promise<void> => {
   // Hàm này sẽ nhận vào ID người dùng và thực hiện xóa người dùng khỏi cơ sở dữ liệu.
   return res.redirect("/");
 };
-export { getHomepage, getCreateUserPage, postCreateUserPage, postDelUserPage };
+const getviewUserPage = async (req: Request, res: Response): Promise<void> => {
+  const userId = req.params.id;
+  // Lấy ID người dùng từ tham số URL
+  const user = await handleViewUser(userId);
+  // Gọi hàm handleViewUser để lấy thông tin người dùng từ cơ sở dữ liệu
+  return res.render("view-user", {
+    title: "View User",
+    user: user[0],
+  });
+};
+export { getHomepage, getCreateUserPage, postCreateUserPage, postDelUserPage, getviewUserPage };

@@ -44,5 +44,17 @@ const handleDeleteUser = async (userId: string) => {
             console.log(err);
       }
 };
-
-export { handleCreateUser, getAllUsers, handleDeleteUser };
+const handleViewUser = async (userId: string) => {
+      const connection = await getConnection();
+      try {
+            const sql = 'SELECT * FROM `user` WHERE id = ?';
+            const values = [userId];
+            const [results, fields] = await connection.query(sql, values);
+            // Lấy thông tin người dùng từ cơ sở dữ liệu
+            // console.log(results);
+            return results; // trả về thông tin người dùng
+      } catch (err) {
+            console.log(err);
+      }
+};
+export { handleCreateUser, getAllUsers, handleDeleteUser, handleViewUser };

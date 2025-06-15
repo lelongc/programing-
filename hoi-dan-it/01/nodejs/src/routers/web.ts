@@ -2,7 +2,7 @@ import express, { Express } from "express";
 // Nhập express và kiểu Express từ thư viện express.
 // express là một framework web phổ biến cho Node.js, cung cấp các tính năng để xây dựng ứng dụng web.
 
-import { getHomepage, getCreateUserPage, postCreateUserPage, postDelUserPage } from "@controllers/users.controller";
+import { getHomepage, getCreateUserPage, postCreateUserPage, postDelUserPage, getviewUserPage } from "@controllers/users.controller";
 // Nhập các hàm getHomepage và getCreateUserPage từ file users.controller.ts.
 
 
@@ -23,6 +23,7 @@ const webRoutes = (app: Express) => {
       // tham chiếu đến hàm getCreateUserPage trong file users.controller.ts để xử lý yêu cầu GET đến trang tạo người dùng.
       // tham chiếu đến hàm postCreateUserPage trong file users.controller.ts để xử lý yêu cầu POST đến trang tạo người dùng.
       router.post("/delete-user/:id", postDelUserPage);
+      router.get("/view-user/:id", getviewUserPage);
 
       app.use("/", router);
       // Đăng ký router với ứng dụng Express
