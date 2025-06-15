@@ -12,14 +12,14 @@
     "clean": "rm -rf dist",
     "uninstall": "npm uninstall express @types/express typescript @types/node nodemon ts-node",
     "installdp": "npm install express @types/express typescript @types/node nodemon ts-node",
-    "start:debug": "nodemon --inspect=9229 -e ts,tsx --exec node -r ts-node/register ./src/app.ts"
+    "start:debug": "nodemon --inspect=9229 -e ts,tsx --exec node -r ts-node/register -r tsconfig-paths/register ./src/app.ts"
   },
   "nodemonConfig": {
     "watch": [
       "src"
     ],
     "ext": "ts",
-    "exec": "ts-node src/app.ts",
+    "exec": "ts-node -r tsconfig-paths/register src/app.ts",
     "ignore": [
       "dist",
       "node_modules"
@@ -39,6 +39,7 @@
     "@types/node": "^22.10.7",
     "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.8.3"
   }
 }

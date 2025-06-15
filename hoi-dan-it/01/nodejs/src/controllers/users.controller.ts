@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { handleCreateUser, getAllUsers } from "../services/user-service";
+import { handleCreateUser, getAllUsers } from "@services/user-service";
 interface HomePageData {
   title: string;
 }

@@ -1,5 +1,5 @@
 
-import getConnection from '../config/database';
+import getConnection from '@config/database';
 const handleCreateUser = async (username: string, email: string, address: string) => {
       // Tạo kết nối đến cơ sở dữ liệu
       const connection = await getConnection();

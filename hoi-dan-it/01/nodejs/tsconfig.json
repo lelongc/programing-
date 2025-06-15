@@ -8,6 +8,24 @@
         // "forceConsistentCasingInFileNames": true
         "outDir": "./dist",
         "sourceMap": true,
-        "rootDir": "./src"
+        "rootDir": "./src",
+        "baseUrl": ".",
+        "paths": {
+            "@config/*": [
+                "./src/config/*"
+            ],
+            "@module/*": [
+                "./src/module/*"
+            ],
+            "@controllers/*": [
+                "./src/controllers/*"
+            ],
+            "@services/*": [
+                "./src/services/*"
+            ],
+            "@routers/*": [
+                "./src/routers/*"
+            ]
+        }
     }
 }

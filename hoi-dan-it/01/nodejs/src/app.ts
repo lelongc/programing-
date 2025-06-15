@@ -3,7 +3,7 @@ import express from "express";
 // require("dotenv").config();
 import 'dotenv/config';
 
-import webRoutes from "./routers/web";
+import webRoutes from "@routers/web";
 // import webRoutes from "./routers/web.js"; // nếu sử dụng CommonJS thì cần thêm .js vào cuối đường dẫn
 
 
