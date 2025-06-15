@@ -1,10 +1,10 @@
 ten = "Test"
 tuoi = 20
 def test():
-                global ten
-                ten = "Test2"
-                print(ten)
-                print(tuoi)
+      global ten
+      ten = "Test2"
+      print(ten)
+      print(tuoi)
 test()
 print(ten)      
 print(tuoi)
