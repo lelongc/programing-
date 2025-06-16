@@ -6,11 +6,11 @@ const getConnection = async () => {
       // Create a connection to the database
       const connection = await mysql.createConnection({
             // Replace with your database configuration
-            port: 3306,
-            host: 'localhost',
-            user: 'root',
-            password: '190110',
-            database: 'nodejshit',
+            port: Number(process.env.DB_PORT) || 3306,
+            host: process.env.DB_HOST || 'localhost',
+            user: process.env.DB_USER || 'root',
+            password: process.env.DB_PASSWORD || '190110',
+            database: process.env.DB_NAME || 'nodejshit',
       });
 
       return connection;
