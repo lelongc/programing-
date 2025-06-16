@@ -57,4 +57,19 @@ const handleViewUser = async (userId: string) => {
             console.log(err);
       }
 };
-export { handleCreateUser, getAllUsers, handleDeleteUser, handleViewUser };
+const handleUpdateUser = async (userId: string, username: string, email: string, address: string) => {
+      const connection = await getConnection();
+      try {
+            const sql = 'UPDATE `user` SET name = ?, email = ?, address = ? WHERE id = ?';
+            const values = [username, email, address, userId];
+            const [results, fields] = await connection.query(sql, values);
+            // Cập nhật thông tin người dùng trong cơ sở dữ liệu
+            // console.log(results);
+            return results; // trả về kết quả cập nhật người dùng
+      } catch (err) {
+            console.log(err);
+      }
+};
+
+
+export { handleCreateUser, getAllUsers, handleDeleteUser, handleViewUser, handleUpdateUser };

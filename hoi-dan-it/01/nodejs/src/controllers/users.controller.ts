@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { handleCreateUser, getAllUsers, handleDeleteUser, handleViewUser } from "@services/user-service";
+import { handleCreateUser, getAllUsers, handleDeleteUser, handleViewUser, handleUpdateUser } from "@services/user-service";
 interface HomePageData {
   title: string;
 }
@@ -49,4 +49,12 @@ const getviewUserPage = async (req: Request, res: Response): Promise<void> => {
     user: user[0],
   });
 };
-export { getHomepage, getCreateUserPage, postCreateUserPage, postDelUserPage, getviewUserPage };
+const postUpdateUserPage = async (req: Request, res: Response): Promise<void> => {
+
+  const { id, username, email, address } = req.body;
+  // Lấy dữ liệu từ form gửi lên
+  const user = await handleUpdateUser(id, username, email, address);
+  // Gọi hàm handleUpdateUser để cập nhật thông tin người dùng
+  return res.redirect("/");
+};
+export { getHomepage, getCreateUserPage, postCreateUserPage, postDelUserPage, getviewUserPage, postUpdateUserPage };

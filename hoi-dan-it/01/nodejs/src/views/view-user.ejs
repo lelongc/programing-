@@ -19,7 +19,9 @@
   <body>
     <div class="container mt-5">
       <h3>view detail User <%= user.username %> with id <%= user.id %></h3>
-      <form action="/handler-update-user" method="POST">
+
+      <form action="/update-user" method="POST">
+        <input type="hidden" name="id" value="<%= user.id %>" />
         <div class="mb-3">
           <label for="username" class="form-label">Username</label>
           <input
@@ -29,7 +31,7 @@
             name="username"
             placeholder="Enter username"
             required
-            value="<%= user.username %>"
+            value="<%= user.name %>"
           />
         </div>
         <div class="mb-3">
