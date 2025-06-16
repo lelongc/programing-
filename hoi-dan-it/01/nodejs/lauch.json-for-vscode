@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "configurations": [
+    {
+      "name": "debug-nodejshd",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}\\hoi-dan-it\\01\\nodejs",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "start:debug"
+      ]
+    }
+  ],
+}
