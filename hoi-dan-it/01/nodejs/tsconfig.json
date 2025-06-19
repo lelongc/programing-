@@ -25,7 +25,7 @@
             ],
             "@routers/*": [
                 "./src/routers/*"
-            ]
+            ],
         }
     }
 }

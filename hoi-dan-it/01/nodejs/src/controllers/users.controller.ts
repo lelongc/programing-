@@ -28,7 +28,7 @@ const getCreateUserPage = (req: Request, res: Response): void => {
 const postCreateUserPage = async (req: Request, res: Response): Promise<void> => {
   // Lấy dữ liệu từ form gửi lên
   const { username, email, address } = req.body;
-  await handleCreateUser(username, email, address);
+  const a = await handleCreateUser(username, email, address);
   return res.redirect("/");
 };
 const postDelUserPage = async (req: Request, res: Response): Promise<void> => {

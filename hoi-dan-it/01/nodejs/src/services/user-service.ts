@@ -1,34 +1,26 @@
 
 import getConnection from '@config/database';
+
+import { prisma } from '@config/client'; // Import Prisma client instance
+
 const handleCreateUser = async (username: string, email: string, address: string) => {
       // Tạo kết nối đến cơ sở dữ liệu
-      const connection = await getConnection();
-      try {
-            // Thực hiện truy vấn để thêm người dùng mới
-            const sql = 'INSERT INTO `user` (name, email, address) VALUES (?, ?, ?)';
-            const values = [username, email, address];
-            // Sử dụng connection.query để thực hiện truy vấn
-            const [results, fields] = await connection.query(sql, values);
-            // console.log(results);
-            // Trả về kết quả truy vấn
-            // return results;
-      } catch (err) {
-            console.log(err);
-      }
+
+
+      const newUser = await prisma.user.create({
+            data: {
+                  name: username,
+                  email: email,
+                  address: address
+            }
+      });
+      return newUser; // trả về người dùng mới được tạo
+
 };
 const getAllUsers = async () => {
       //  lấy dữ liệu người dùng từ cơ sở dữ liệu
-      const connection = await getConnection();
-      try {
-            const [results, fields] = await connection.query(
-                  'SELECT * FROM `user`'
-            );
-            return results; // trả về danh sách người dùng
-
-      } catch (err) {
-            console.log(err);
-            return [];
-      }
+      const users = await prisma.user.findMany();
+      return users;
 };
 
 const handleDeleteUser = async (userId: string) => {

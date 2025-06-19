@@ -28,13 +28,13 @@
   "author": "drash",
   "license": "ISC",
   "dependencies": {
+    "@prisma/client": "^6.10.1",
     "dotenv": "^16.5.0",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
     "mysql2": "^3.14.1"
   },
   "devDependencies": {
-    "@prisma/client": "^6.10.1",
     "@types/ejs": "^3.1.5",
     "@types/express": "^5.0.3",
     "@types/node": "^22.10.7",
