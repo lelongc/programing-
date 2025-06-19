@@ -53,6 +53,45 @@ This is the foundation for starting to learn and implement data structures.
 - `Python Scope`
 - `Python Lambda` (Useful when working with sorting functions)
 - `Python Iterators`
+- dsa - (Python DSA
+
+Lists and Arrays
+
+Stacks
+
+Queues
+
+Linked Lists
+
+Hash Tables
+
+Trees
+
+Binary Trees
+
+Binary Search Trees
+
+AVL Trees
+
+Graphs
+
+Linear Search
+
+Binary Search
+
+Bubble Sort
+
+Selection Sort
+
+Insertion Sort
+
+Quick Sort
+
+Counting Sort
+
+Radix Sort
+
+Merge Sort)
 
 ---
 
