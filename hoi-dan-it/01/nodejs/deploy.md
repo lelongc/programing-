@@ -1,4 +1,4 @@
-# 🚀 Hướng dẫn cài đặt và chạy dự án trên Local & Docker
+# 🚀 Hướng dẫn cài đặt và chạy dự án trên Local & Docker.
 
 ## **📋 Yêu cầu hệ thống**
 
