@@ -18,7 +18,7 @@
   </head>
   <body>
     <div class="container mt-5">
-      <h3>view detail User <%= user.username %> with id <%= user.id %></h3>
+      <h3>view detail User <%= user.name %> with id <%= user.id %></h3>
 
       <form action="/update-user" method="POST">
         <input type="hidden" name="id" value="<%= user.id %>" />

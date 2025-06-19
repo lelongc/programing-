@@ -28,7 +28,7 @@ const getCreateUserPage = (req: Request, res: Response): void => {
 const postCreateUserPage = async (req: Request, res: Response): Promise<void> => {
   // Lấy dữ liệu từ form gửi lên
   const { username, email, address } = req.body;
-  const a = await handleCreateUser(username, email, address);
+  await handleCreateUser(username, email, address);
   return res.redirect("/");
 };
 const postDelUserPage = async (req: Request, res: Response): Promise<void> => {
@@ -46,7 +46,7 @@ const getviewUserPage = async (req: Request, res: Response): Promise<void> => {
   // Gọi hàm handleViewUser để lấy thông tin người dùng từ cơ sở dữ liệu
   return res.render("view-user", {
     title: "View User",
-    user: user[0],
+    user: user, // Truyền thông tin người dùng vào view
   });
 };
 const postUpdateUserPage = async (req: Request, res: Response): Promise<void> => {

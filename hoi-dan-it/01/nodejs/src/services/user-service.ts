@@ -24,43 +24,34 @@ const getAllUsers = async () => {
 };
 
 const handleDeleteUser = async (userId: string) => {
-      const connection = await getConnection();
-      try {
-            const sql = 'DELETE FROM `user` WHERE id = ?';
-            const values = [userId];
-            const [results, fields] = await connection.query(sql, values);
-            // Xóa người dùng khỏi cơ sở dữ liệu
-            // console.log(results);
-            // return results; // trả về kết quả xóa người dùng
-      } catch (err) {
-            console.log(err);
-      }
+      // Xóa người dùng khỏi cơ sở dữ liệu
+      const deletedUser = await prisma.user.delete({
+            where: {
+                  id: Number(userId)
+            }
+      });
+      return deletedUser; // trả về người dùng đã bị xóa
 };
 const handleViewUser = async (userId: string) => {
-      const connection = await getConnection();
-      try {
-            const sql = 'SELECT * FROM `user` WHERE id = ?';
-            const values = [userId];
-            const [results, fields] = await connection.query(sql, values);
-            // Lấy thông tin người dùng từ cơ sở dữ liệu
-            // console.log(results);
-            return results; // trả về thông tin người dùng
-      } catch (err) {
-            console.log(err);
-      }
+      const user = await prisma.user.findUnique({
+            where: {
+                  id: Number(userId)
+            }
+      });
+      return user;
 };
 const handleUpdateUser = async (userId: string, username: string, email: string, address: string) => {
-      const connection = await getConnection();
-      try {
-            const sql = 'UPDATE `user` SET name = ?, email = ?, address = ? WHERE id = ?';
-            const values = [username, email, address, userId];
-            const [results, fields] = await connection.query(sql, values);
-            // Cập nhật thông tin người dùng trong cơ sở dữ liệu
-            // console.log(results);
-            return results; // trả về kết quả cập nhật người dùng
-      } catch (err) {
-            console.log(err);
-      }
+      const user = await prisma.user.update({
+            where: {
+                  id: Number(userId)
+            },
+            data: {
+                  name: username,
+                  email: email,
+                  address: address
+            }
+      });
+      return user;
 };
 
 
