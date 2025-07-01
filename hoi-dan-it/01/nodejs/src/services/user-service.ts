@@ -7,14 +7,21 @@ const handleCreateUser = async (username: string, email: string, address: string
       // Tạo kết nối đến cơ sở dữ liệu
 
 
-      const newUser = await prisma.user.create({
+      await prisma.user.createMany({
             data: {
-                  name: username,
+                  username: username,
                   email: email,
-                  address: address
+                  address: address,
+
+                  password: 'hashed_password',
+                  fullName: 'Full Name',
+
+                  phone: '123456789',
+                  accountType: 'user',
+                  avatar: 'default-avatar.png', // Giả sử bạn có một ảnh đại diện mặc định
             }
       });
-      return newUser; // trả về người dùng mới được tạo
+      // trả về người dùng mới được tạo
 
 };
 const getAllUsers = async () => {
@@ -46,9 +53,13 @@ const handleUpdateUser = async (userId: string, username: string, email: string,
                   id: Number(userId)
             },
             data: {
-                  name: username,
+                  username: username,
                   email: email,
-                  address: address
+                  address: address,
+                  // Thêm các trường khác nếu cần thiết
+                  password: 'new_hashed_password', // Nếu bạn muốn cập nhật mật khẩu   
+                  fullName: 'Updated Full Name', // Cập nhật tên đầy đủ
+                  phone: '987654321', // Cập nhật số điện thoại
             }
       });
       return user;

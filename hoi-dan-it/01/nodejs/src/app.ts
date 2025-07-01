@@ -5,7 +5,8 @@ import 'dotenv/config';
 
 import webRoutes from "@routers/web";
 // import webRoutes from "./routers/web.js"; // nếu sử dụng CommonJS thì cần thêm .js vào cuối đường dẫn
-
+import seed from "@config/seed"; // import file seed dữ liệu
+import initializeDatabase from "@config/seed";
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -21,7 +22,7 @@ app.use(express.json()); // middleware để parse dữ liệu JSON gửi lên
 
 webRoutes(app) // sử dụng router đã định nghĩa trong file web.ts
 
-
+initializeDatabase() // gọi hàm khởi tạo cơ sở dữ liệu, tạo bảng người dùng nếu chưa tồn tại
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
