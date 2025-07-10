@@ -11,30 +11,19 @@ Walk through the fundamentals of the two-pointers technique for solving various 
 
 **Problems:**
 
-- Introduction to Two Pointers
-- [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) - LeetCode #125
-- Solution: Valid Palindrome
-- [3Sum](https://leetcode.com/problems/3sum/) - LeetCode #15
-- Solution: 3Sum
-- [Remove Nth Node from End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) - LeetCode #19
-- Solution: Remove Nth Node from End of List
-- [Sort Colors](https://leetcode.com/problems/sort-colors/) - LeetCode #75
-- Solution: Sort Colors
-- [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/) - LeetCode #151
-- Solution: Reverse Words in a String
-- [Valid Word Abbreviation](https://leetcode.com/problems/valid-word-abbreviation/) - LeetCode #408 (Premium)
-- Solution: Valid Word Abbreviation
-- [Strobogrammatic Number](https://leetcode.com/problems/strobogrammatic-number/) - LeetCode #246 (Premium)
-- Solution: Strobogrammatic Number
-- [Minimum Number of Moves to Make Palindrome](https://leetcode.com/problems/minimum-number-of-moves-to-make-palindrome/) - LeetCode #2193
-- Solution: Minimum Number of Moves to Make Palindrome
-- [Next Palindrome Using Same Digits](https://leetcode.com/problems/next-palindrome-using-same-digits/) - LeetCode #564
-- Solution: Next Palindrome Using Same Digits
-- [Lowest Common Ancestor of a Binary Tree III](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/) - LeetCode #1650 (Premium)
-- Solution: Lowest Common Ancestor of a Binary Tree III
-- [Count Pairs Whose Sum is Less than Target](https://leetcode.com/problems/count-pairs-whose-sum-is-less-than-target/) - LeetCode #2824
-- Solution: Count Pairs Whose Sum is Less than Target
-- [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/) - LeetCode #680
+1. Introduction to Two Pointers
+1. [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) - LeetCode #125
+1. [3Sum](https://leetcode.com/problems/3sum/) - LeetCode #15
+1. [Remove Nth Node from End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) - LeetCode #19
+1. [Sort Colors](https://leetcode.com/problems/sort-colors/) - LeetCode #75
+1. [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/) - LeetCode #151
+1. [Valid Word Abbreviation](https://leetcode.com/problems/valid-word-abbreviation/) - LeetCode #408 (Premium)
+1. [Strobogrammatic Number](https://leetcode.com/problems/strobogrammatic-number/) - LeetCode #246 (Premium)
+1. [Minimum Number of Moves to Make Palindrome](https://leetcode.com/problems/minimum-number-of-moves-to-make-palindrome/) - LeetCode #2193
+1. [Next Palindrome Using Same Digits](https://leetcode.com/problems/next-palindrome-using-same-digits/) - LeetCode #564
+1. [Lowest Common Ancestor of a Binary Tree III](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/) - LeetCode #1650 (Premium)
+1. [Count Pairs Whose Sum is Less than Target](https://leetcode.com/problems/count-pairs-whose-sum-is-less-than-target/) - LeetCode #2824
+1. [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/) - LeetCode #680
 
 Two Pointers Mock Interview (Premium)
 
