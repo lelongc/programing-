@@ -1,1 +1,0 @@
-remember extract all the same part at one 
